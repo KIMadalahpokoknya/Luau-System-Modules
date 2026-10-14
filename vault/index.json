@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "author": "Kimtan / CukingStudio",
+  "note": "Tambah script: taruh .lua di vault/scripts/ lalu jalankan node tools/vault-index.js. Manifest ini dibaca situs portofolio Kimtan.",
+  "totalLines": 1095,
+  "entries": [
+    {
+      "id": "Matchmaking",
+      "title": "Matchmaking v3",
+      "cat": "Sistem",
+      "tags": [
+        "mmr",
+        "region",
+        "backfill",
+        "teleport"
+      ],
+      "summary": "Antrian 5v5: jendela MMR melebar seiring waktu, prioritas region, backfill bot saat kelewatan batas, dan rollback kalau teleport gagal.",
+      "lang": "Luau",
+      "file": "scripts/Matchmaking.lua",
+      "lines": 244,
+      "bytes": 8958,
+      "updated": "2026-10-13"
+    },
+    {
+      "id": "NetSignal",
+      "title": "NetSignal",
+      "cat": "Networking",
+      "tags": [
+        "batching",
+        "bandwidth",
+        "unreliable",
+        "optimasi"
+      ],
+      "summary": "Signal tereplikasi dengan batching per-tick dan last-write-wins: 300 fire/detik jadi 30 paket, termasuk jalur UnreliableRemoteEvent <900 byte.",
+      "lang": "Luau",
+      "file": "scripts/NetSignal.lua",
+      "lines": 160,
+      "bytes": 6057,
+      "updated": "2026-10-13"
+    },
+    {
+      "id": "PerfProbe",
+      "title": "PerfProbe",
+      "cat": "Performa",
+      "tags": [
+        "profiling",
+        "p95",
+        "memory leak",
+        "budget"
+      ],
+      "summary": "Ukur frame time dan durasi sistem pakai persentil (bukan rata-rata), deteksi leak dari tren memory, dan siap dipasangkan dengan Microprofiler.",
+      "lang": "Luau",
+      "file": "scripts/PerfProbe.lua",
+      "lines": 192,
+      "bytes": 6961,
+      "updated": "2026-10-13"
+    },
+    {
+      "id": "ProfileStore",
+      "title": "ProfileStore v2",
+      "cat": "Data",
+      "tags": [
+        "DataStore",
+        "session lock",
+        "backoff",
+        "Luau"
+      ],
+      "summary": "Pembungkus DataStore dengan session lock, retry + jitter, UpdateAsync (bukan SetAsync), dan flush bertahap saat server ditutup.",
+      "lang": "Luau",
+      "file": "scripts/ProfileStore.lua",
+      "lines": 157,
+      "bytes": 5958,
+      "updated": "2026-10-13"
+    },
+    {
+      "id": "RbxHttpAuth",
+      "title": "RbxHttpAuth",
+      "cat": "Integrasi",
+      "tags": [
+        "HttpService",
+        "proxy",
+        "csrf",
+        "cache"
+      ],
+      "summary": "Panggil API Roblox tanpa membocorkan kredensial: bearer token ke worker proxy, cache + stale-if-error, retry sadar-429. Termasuk file worker-nya.",
+      "lang": "Luau",
+      "file": "scripts/RbxHttpAuth.lua",
+      "lines": 137,
+      "bytes": 5856,
+      "updated": "2026-10-13"
+    },
+    {
+      "id": "RemoteGuard",
+      "title": "RemoteGuard",
+      "cat": "Keamanan",
+      "tags": [
+        "exploit",
+        "rate limit",
+        "validasi",
+        "RemoteEvent"
+      ],
+      "summary": "Semua remote wajib lolos token-bucket rate limit, cek tipe & clamp argumen, lalu strike counter sampai kick. Client dianggap musuh.",
+      "lang": "Luau",
+      "file": "scripts/RemoteGuard.lua",
+      "lines": 205,
+      "bytes": 7045,
+      "updated": "2026-10-13"
+    }
+  ]
+}

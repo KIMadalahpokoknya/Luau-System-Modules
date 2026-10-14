@@ -1,0 +1,15 @@
+{
+  "name": "luau-system-modules",
+  "version": "1.0.0",
+  "description": "Modul Luau produksi CukingStudio — dibaca oleh situs portofolio lewat vault/index.json",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KIMadalahpokoknya/Luau-System-Modules.git"
+  },
+  "scripts": {
+    "vault": "node tools/vault-index.js",
+    "check": "node tools/vault-index.js && node -e \"const m=require('./vault/index.json');if(!m.entries.length)throw new Error('manifest kosong');console.log('✓ manifest valid:',m.entries.length,'script,',m.totalLines,'baris')\""
+  }
+}
